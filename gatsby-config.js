@@ -1,21 +1,21 @@
 module.exports = {
   plugins: [
-    // 'gatsby-plugin-sharp',
-    // 'gatsby-transformer-sharp',
-    // 'gatsby-transformer-json',
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     path: './data/'
-    //   }
-    // },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        projectId: '2y3275eg',
-        dataset: 'production',
-        watchMode: true
+        path: './data/'
       }
-    }
+    },
+    // {
+    //   resolve: 'gatsby-source-sanity',
+    //   options: {
+    //     projectId: 'pbyz1190',
+    //     dataset: 'production',
+    //     watchMode: true
+    //   }
+    // }
   ]
 };

@@ -14,5 +14,29 @@
     "image": "./images/project2.jpg",
     "description": "This one is also good.",
     "tags": ["GraphQL"]
+  },
+  {
+    "title": "Another Project",
+    "slug": "project-3",
+    "url": "https://example.org/",
+    "image": "./images/project2.jpg",
+    "description": "This one is also good.",
+    "tags": ["GraphQL"]
+  },
+  {
+    "title": "Another Project",
+    "slug": "project-4",
+    "url": "https://example.org/",
+    "image": "./images/project2.jpg",
+    "description": "This one is also good.",
+    "tags": ["GraphQL"]
+  },
+  {
+    "title": "Another Project",
+    "slug": "project-5",
+    "url": "https://example.org/",
+    "image": "./images/project2.jpg",
+    "description": "This one is also good.",
+    "tags": ["GraphQL"]
   }
 ]
