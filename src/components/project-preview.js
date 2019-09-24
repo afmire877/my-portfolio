@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -57,7 +56,7 @@ function ProjectPreview({ title, description, slug, imageData, github, tags}) {
       </CardActionArea>
       <CardActions>
         <Button size="small" href={`/${slug}`} color="primary">
-          View Source
+          <faGithub />View Source
         </Button>
         <Button size="small" href={`/${github}`} color="primary">
           Demo
