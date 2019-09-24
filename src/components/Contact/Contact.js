@@ -23,7 +23,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
                 <a href="www.linkedin.com/in/ahmedmire">
                 <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
-                <a href="/cv-1pdf" download>
+                <a href="https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1">
                 
                 <FontAwesomeIcon icon={faFilePdf}  size="3x"/>
                 </a>

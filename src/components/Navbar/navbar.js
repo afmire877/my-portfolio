@@ -8,9 +8,7 @@ import Styled from 'styled-components'
 
 const NavBar = () => {
 
-const Header = Styled.header`
-    background-color: red;
-`;
+
 
     return (
         <Header className="header">

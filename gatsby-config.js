@@ -9,6 +9,15 @@ module.exports = {
         path: './data/'
       }
     },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
     // {
     //   resolve: 'gatsby-source-sanity',
     //   options: {
