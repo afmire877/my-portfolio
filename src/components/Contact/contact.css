@@ -18,3 +18,12 @@
     justify-content: space-between;
     width: 500px;
 }
+.links a:visited,
+.links a {
+    color: white;
+}   
+
+.links a svg:hover ,
+.icons a svg:hover {
+    color: black;
+}

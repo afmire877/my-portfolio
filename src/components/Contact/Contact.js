@@ -14,17 +14,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
             
             <h3 className="contact__cta">Feel free to contact me, if you have any enquires</h3>
             <div className="links">
-                <a href="www.github.com/afmire877" >
+                <a href="https://github.com/afmire877" >
                 <FontAwesomeIcon icon={faGithub} size="3x" />
                 </a>
                 <a href>
                 <FontAwesomeIcon icon={faTwitter}  size="3x"/>
                 </a>
-                <a href="www.linkedin.com/in/ahmedmire">
+                <a href="https://www.linkedin.com/in/ahmedmire">
                 <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
                 <a href="https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1">
-                
                 <FontAwesomeIcon icon={faFilePdf}  size="3x"/>
                 </a>
             </div>
