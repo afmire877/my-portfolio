@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ahmed Mire - Front End Dev',
+    title: 'Ahmed Mire - Front end Developer - Portfolio',
     description: `
       This is a blog theme. The description will be showed in SEO results on pages
       without their own descriptions.
@@ -8,7 +8,8 @@ module.exports = {
     siteUrl: 'https://ahmedmire.com',
     image: 'https://lengstorf.com/images/jason-lengstorf.jpg',
     author: {
-      name: 'Ahmed',
+      name: 'Ahmed Mire',
+      title: 'Freelance Front end Developer',
       minibio: `
         I am a front end developer that loves automation.
       `,
@@ -19,8 +20,13 @@ module.exports = {
       logo: 'https://levelup.com/logo.png',
     },
     social: {
-      twitter: '@fuadcodes',
-      fbAppID: '',
+      twitter: 'https://twitter.com/fuadcodes',
+      github: 'https://github.com/afmire877',
+      linkedin: 'https://www.linkedin.com/in/ahmedmire',
+      medium: 'https://medium.com/@afmire877',
+      dev: 'https://dev.to/afmire877',
+      resume: 'https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1'
+
     },
     
   },
@@ -35,7 +41,14 @@ module.exports = {
       options: {
         path: './data/'
       }
-    },
+    },  
+    {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `img`,
+      path: `${__dirname}/src/img/`
+    }
+   },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

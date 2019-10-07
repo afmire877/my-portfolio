@@ -35,11 +35,6 @@ function ProjectPreview({ title, description, slug, imageData, github, tags}) {
     <Card className={classes.card}>
       <CardActionArea href={`/${slug}`}>
       <Image className={classes.media} fluid={imageData} alt={title} />
-        {/* <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        /> */}
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}

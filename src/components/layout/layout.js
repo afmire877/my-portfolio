@@ -11,9 +11,9 @@ const Layout = ({ children }) => (
   <React.Fragment>
     <NavBar />
       <main >
-        <Container>
+        
           {children}
-        </Container>
+
       </main>
     </React.Fragment>
 );
