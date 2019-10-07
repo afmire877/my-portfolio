@@ -1,0 +1,21 @@
+
+
+.particles {
+    grid-column: 1/13;
+    grid-row: 1;
+}
+div h1, 
+div h2 {
+    font-weight: 300;
+}
+
+
+canvas {
+    background: #2634F2
+}
+.socialsIcons a svg{
+    color: white;
+}
+.socialsIcons a {
+    margin-left: 22px
+}
