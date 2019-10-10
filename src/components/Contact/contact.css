@@ -2,28 +2,3 @@
 
 
 
-.contact__content  {
-    color: white;
-    text-align: center;
-    margin-top: 50px;
-    padding: 100px ; 
-    background: #2634F2;
-}
-.heading {
-    margin-top: 30px;
-}
-.links {
-    margin: 30px auto 0 auto;
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
-}
-.links a:visited,
-.links a {
-    color: white;
-}   
-
-.links a svg:hover ,
-.icons a svg:hover {
-    color: black;
-}
