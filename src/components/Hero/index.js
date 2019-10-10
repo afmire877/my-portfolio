@@ -12,11 +12,13 @@ const Banner = Styled.div`
     font-weight: 300;
     color: white;
     z-index: 10;
-    grid-column: 5/9;
+    grid-column: 2/12;
     align-self: center;
     justify-self: center;
     color: white;
     text-align: center;
+    display:grid;
+    grid-gap: 15px;
 `;
 
 
@@ -85,7 +87,7 @@ class Hero extends React.Component {
                 ) => {
                     return (
                         <Fragment>
-                        <h1>Hi, I'm {author.name}</h1>
+                        <h1>Hi, I'm <span className="name">{author.name}</span></h1>
                         <h2>{author.title}</h2>
                         <div className="socialsIcons">
                             <Icon icon={faTwitter} href={social.twitter}/>

@@ -5,10 +5,16 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Styled from 'styled-components';
+
+
 
 const useStyles = makeStyles({
   card: {
     minWidth: 275,
+    gridRow: 7,
+    fontFamily: 'Montserrat sans-serif',
+    marginBottom: '30px',
   },
   bullet: {
     display: 'inline-block',
@@ -19,38 +25,43 @@ const useStyles = makeStyles({
     fontSize: 14,
   },
   pos: {
+    fontSize: 12,
     marginBottom: 12,
   },
 });
 
-export default function SimpleCard() {
+BlogCard.defualtProps = {
+  title: 'Defualt',
+  href: '#'
+}
+const Tag = ({ tag }) =>{ 
+const classes = useStyles();
+const bull = <span className={classes.bullet}>•</span>;
+  return <span>{tag} {bull}</span>
+}
+
+
+export default function BlogCard({title, href, tags, preview}) {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
         <Typography variant="h5" component="h2">
-          be
-          {bull}
-          nev
-          {bull}o{bull}
-          lent
+        {title}
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
+        <Typography className={classes.pos} color="textSecondary" >
+          {(tags) ? tags.map((t) => {
+            if(!t) return;
+            return <Tag tag={t} />
+          }) : ''}
         </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+        <Typography >
+          {preview}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button href={href} size="small">Learn More</Button>
       </CardActions>
     </Card>
   );

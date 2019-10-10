@@ -25,7 +25,8 @@ module.exports = {
       linkedin: 'https://www.linkedin.com/in/ahmedmire',
       medium: 'https://medium.com/@afmire877',
       dev: 'https://dev.to/afmire877',
-      resume: 'https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1'
+      resume: 'https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1',
+      email: 'afmire877@gmail.com'
 
     },
     
@@ -56,6 +57,20 @@ module.exports = {
           injectFirst: true,
         },
       },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://www.medium.com/feed/@afmire877`,
+        name: `GatsbyBlog`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ['itunes:duration']
+          }
+        }
+      }
     },
     `gatsby-plugin-styled-components`,
 

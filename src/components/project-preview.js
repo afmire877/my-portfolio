@@ -22,6 +22,7 @@ const Tags = Styled.span`
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
+    minWidth: 300,
   },
   media: {
     height: 140,

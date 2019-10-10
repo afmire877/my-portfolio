@@ -1,6 +1,7 @@
 
 
 .particles {
+    height: calc(100vh - 50px);
     grid-column: 1/13;
     grid-row: 1;
 }
@@ -8,14 +9,34 @@ div h1,
 div h2 {
     font-weight: 300;
 }
+.name {
+    font-weight: bold;
+}
 
 
 canvas {
-    background: #2634F2
+    background: #2634F2;
+}
+.socialsIcons {
+
 }
 .socialsIcons a svg{
     color: white;
 }
+
+@media (max-width: 425px) {
+    div h1  {
+        font-size: 30px;
+    }
+    div h2 {
+        font-size: 20px;
+    }
+    .socialsIcons a {
+        color: white;
+        font-size: 15px;
+    }
+}
+
 .socialsIcons a {
     margin-left: 22px
 }
