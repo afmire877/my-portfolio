@@ -7,7 +7,10 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Icon from './Common/icons'
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import Typography from '@material-ui/core/Typography';
+
 
 
 const Tags = Styled.span`
@@ -19,17 +22,23 @@ const Tags = Styled.span`
   
 
 `;
+const IconWrapper = Styled.span`
+  margin-right: 10px;
+`;
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
     minWidth: 300,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   media: {
     height: 140,
   },
 });
 
-function ProjectPreview({ title, description, slug, imageData, github, tags}) {
+function ProjectPreview({ title, description, slug, imageData, github, tags, url}) {
   const classes = useStyles();
 
   return (
@@ -45,18 +54,22 @@ function ProjectPreview({ title, description, slug, imageData, github, tags}) {
           </Typography>
 
           
-      {tags.map((tag,i)  => {return <Tags>{i>=1 ? '◾' : ``}  {tag}</Tags>})}
+      {tags.map((tag,i)  => {return <Tags>{i>=1 ? '◾ ' : ``}  {tag}</Tags>})}
           
 
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" href={`/${slug}`} color="primary">
-          <faGithub />View Source
+        <Button size="small" href={`https://github.com/afmire877/${github}`} color="primary">
+          <IconWrapper>
+          <Icon icon={faGithub} size="2x" />
+          </IconWrapper>
+          View Source
         </Button>
-        <Button size="small" href={`/${github}`} color="primary">
-          Demo
+        <Button size="small" href={url} color="primary">
+        Demo
         </Button>
+
       </CardActions>
     </Card>
   );

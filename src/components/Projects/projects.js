@@ -19,6 +19,8 @@ const Projects = ({ data }) => {
                 slug={project.slug}
                 imageData={project.image.childImageSharp.fluid}
                 tags={project.tags}
+                github={project.github}
+                url={project.url}
                 />
             ))}
             </div>

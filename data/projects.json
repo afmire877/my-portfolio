@@ -1,42 +1,34 @@
 [
   {
-    "title": "My Project",
-    "slug": "project-1",
-    "url": "https://example.com/",
+    "title": "SD Rota Automation App",
+    "slug": "automation-app",
+    "url": "",
     "image": "./images/project1.jpg",
-    "description": "I built this site to show off my sweet skills!",
-    "tags": ["React", "Gatsby", "JavaScript"]
+    "description": "A Nodejs productivity application to create google calender events after web scraping, using Puppeteer js, the Sports Direct Web App. ",
+    "tags": ["Nodejs", "Puppeteerjs", "JavaScript"],
+    "github": "sd-rota-automation"
+    
   },
   {
-    "title": "Another Project",
-    "slug": "project-2",
-    "url": "https://example.org/",
-    "image": "./images/project2.jpg",
-    "description": "This one is also good.",
-    "tags": ["GraphQL"]
+    "title": "Food Hunter",
+    "slug": "food-hunter",
+    "url": "https://afmire877.github.io/Food-Hunter-/",
+    "image": "./images/Foodhunter.jpg",
+    "description": "An Vanilla JavaScript recipe search application utilizing powered by an API to provide recipes and filter them based on type of diet and calories. ",
+    "tags": ["JavaScript (ES6)", "Webpack", "Babel", "Jest"],
+    "github": "Food-Hunter-"
+
   },
   {
-    "title": "Another Project",
-    "slug": "project-3",
-    "url": "https://example.org/",
-    "image": "./images/project2.jpg",
-    "description": "This one is also good.",
-    "tags": ["GraphQL"]
-  },
-  {
-    "title": "Another Project",
-    "slug": "project-4",
-    "url": "https://example.org/",
-    "image": "./images/project2.jpg",
-    "description": "This one is also good.",
-    "tags": ["GraphQL"]
-  },
-  {
-    "title": "Another Project",
-    "slug": "project-5",
-    "url": "https://example.org/",
-    "image": "./images/project2.jpg",
-    "description": "This one is also good.",
-    "tags": ["GraphQL"]
+    "title": "LEC Education",
+    "slug": "lec-education",
+    "url": "leceducation.co.uk",
+    "image": "./images/leceducation.png",
+    "description": "I designed and developed wordpress theme for a local business to create a better online presence and increase sign-ups.",
+    "tags": ["Bootstrap", "Wordpress Theme"],
+    "github": "https://github.com/afmire877/sd-rota-automation"
+
   }
+
+
 ]

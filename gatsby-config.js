@@ -31,7 +31,7 @@ module.exports = {
     },
     
   },
-  pathPrefix: "/reponame",
+  pathPrefix: "/my-portfolio",
   plugins: [
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -43,13 +43,13 @@ module.exports = {
         path: './data/'
       }
     },  
-    {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `img`,
-      path: `${__dirname}/src/img/`
-    }
-   },
+  //   {
+  //   resolve: `gatsby-source-filesystem`,
+  //   options: {
+  //     name: `img`,
+  //     path: `${__dirname}/src/img/`
+  //   }
+  //  },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

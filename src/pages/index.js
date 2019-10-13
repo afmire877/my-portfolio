@@ -16,6 +16,7 @@ export const query = graphql`
           description
           slug
           tags
+          github
           image {
             childImageSharp {
               fluid {
@@ -32,7 +33,9 @@ export const query = graphql`
 
 export default ({ data }) => (
   <div>
-  <Layout>
+  <Layout
+    home={true}
+    >
     <Hero />
     <Projects data={data} />
     <About />

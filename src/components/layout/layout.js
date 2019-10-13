@@ -1,15 +1,14 @@
 import './layout.css';
 import React from 'react';
 import NavBar from '../Navbar/navbar';
-import { Container } from '@material-ui/core';
 
 
 
 
-const Layout = ({ children }) => (
+const Layout = ({ children, home }) => (
   
   <React.Fragment>
-    <NavBar />
+    <NavBar home={home} />
       <main >
         
           {children}

@@ -1,7 +1,9 @@
 import React from 'react';
+import './project.css'
 import { graphql } from 'gatsby';
 import Layout from '../components/layout/layout';
 import Project from '../components/project';
+import Styled from 'styled-components';
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,11 +22,15 @@ export const query = graphql`
     }
   }
 `;
-
+const Hero = Styled.div`
+  background: #2634F2;
+`;
 
 
 const ProjectPage = ({ data: { projectsJson: project } }) => (
-  <Layout>
+  <Layout
+    home={false}
+  >
     <Project
       title={project.title}
       imageData={project.image.childImageSharp.fluid}
