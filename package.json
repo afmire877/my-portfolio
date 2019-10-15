@@ -9,7 +9,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build  && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
@@ -39,6 +39,8 @@
     "react-helmet": "^5.2.1",
     "react-particles-js": "^2.7.0",
     "react-reveal": "^1.2.2",
+    "react-spinners": "^0.6.1",
+    "react-visibility-sensor": "^5.1.1",
     "styled-components": "^4.4.0"
   },
   "repository": {

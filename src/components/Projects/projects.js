@@ -1,7 +1,23 @@
-import './projects.css';
+// import './projects.css';
 import React, { Fragment } from 'react';
 import ProjectPreview from '../project-preview';
 import Heading from '../Common/heading';
+import Styled from 'styled-components';
+
+const Project = Styled.div`
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+
+    @media (max-width: 735px) {
+    .projects {
+        grid-column: 6;
+    }
+    }
+`;
 
 
  
@@ -10,7 +26,7 @@ const Projects = ({ data }) => {
     return (
         <Fragment>
             <Heading title="Projects" />
-            <div className="projects">
+            <Project >
             {data.allProjectsJson.edges.map(({ node: project }) => (
                 <ProjectPreview
                 key={`preview-${project.slug}`}
@@ -23,7 +39,7 @@ const Projects = ({ data }) => {
                 url={project.url}
                 />
             ))}
-            </div>
+            </Project>
         </Fragment>
     );
 }

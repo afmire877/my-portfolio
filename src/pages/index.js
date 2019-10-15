@@ -5,7 +5,8 @@ import Contact from '../components/Contact/Contact';
 import Hero from '../components/Hero/index';
 import Projects from '../components/Projects/projects';
 import About from '../components/About/about';
-import Blog from '../components/Blog/blog';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 export const query = graphql`
   {
@@ -38,6 +39,7 @@ export default ({ data }) => (
     >
     <Hero />
     <Projects data={data} />
+
     <About />
   </Layout>
   <Contact />

@@ -1,10 +1,30 @@
 [
   {
+    "title": "Alif Cloud",
+    "slug": "alif-cloud",
+    "url": "https://alifcloud.com",
+    "image": "./images/alif.png",
+    "description": "A School Mangement System for local institutions to digitise and automate the admin tasks.",
+    "challenges" : "This project was a major learning lesson for me. I came across many different concepts Auth 2.0, Time Manipulation in JS  and web scraping. ",
+    "features": [
+      "Built a simple API using Node and Express to serve the database",
+      "Worked with a team of 2 to develop this app"
+                ],
+    "tags": ["React","Nodejs", "mySQL", "JavaScript", "express" ],
+    "github": "sd-rota-automation"
+    
+  },
+  {
     "title": "SD Rota Automation App",
     "slug": "automation-app",
     "url": "",
     "image": "./images/project1.jpg",
     "description": "A Nodejs productivity application to create google calender events after web scraping, using Puppeteer js, the Sports Direct Web App. ",
+    "challenges" : "This project was a major learning lesson for me. I came across many different concepts Auth 2.0, Time Manipulation in JS  and web scraping. ",
+    "features": [
+      "Utilized Google Calender API and Auth0 2.0 to autheticate users",
+      "Puppeteer.js to scrape the web application"
+                ],
     "tags": ["Nodejs", "Puppeteerjs", "JavaScript"],
     "github": "sd-rota-automation"
     
@@ -15,6 +35,8 @@
     "url": "https://afmire877.github.io/Food-Hunter-/",
     "image": "./images/Foodhunter.jpg",
     "description": "An Vanilla JavaScript recipe search application utilizing powered by an API to provide recipes and filter them based on type of diet and calories. ",
+    "challenges" : "",
+    "features": ["Utilized Google Calender API and Auth0 2.0 to autheticate users"],
     "tags": ["JavaScript (ES6)", "Webpack", "Babel", "Jest"],
     "github": "Food-Hunter-"
 
@@ -22,13 +44,17 @@
   {
     "title": "LEC Education",
     "slug": "lec-education",
-    "url": "leceducation.co.uk",
+    "url": "https://leceducation.co.uk",
     "image": "./images/leceducation.png",
-    "description": "I designed and developed wordpress theme for a local business to create a better online presence and increase sign-ups.",
+    "description": "I designed and developed wordpress theme for a local business to create a better online presence and increase sign-ups for there business.",
     "tags": ["Bootstrap", "Wordpress Theme"],
+    "challenges" : "I was tasked to establish a modern website that increased brand awareness and attracted new customers by increasing sign-ups. I started by doing brand research and developing the style guide using the existing logo. After that created a wireframe for the client.",
+    "features": [
+      "Worked with a local client to deliver a modern and responsive Wordpress theme",
+      "Created a events page that can be customised by the client",
+      ""
+                ],
     "github": "https://github.com/afmire877/sd-rota-automation"
 
   }
-
-
 ]

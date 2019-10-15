@@ -13,7 +13,6 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
             siteMetadata {
                 defaultTitle: title
                 defaultDesc : description
-                image
                 siteUrl
                 social {
                 twitter
@@ -28,7 +27,6 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
               siteMetadata: {
                   defaultTitle,
                   defaultDesc ,
-                  image,
                   siteurl, 
                   social
               }

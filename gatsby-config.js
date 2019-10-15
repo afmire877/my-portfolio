@@ -6,7 +6,6 @@ module.exports = {
       without their own descriptions.
     `,
     siteUrl: 'https://ahmedmire.com',
-    image: 'https://lengstorf.com/images/jason-lengstorf.jpg',
     author: {
       name: 'Ahmed Mire',
       title: 'Freelance Front end Developer',
@@ -31,7 +30,6 @@ module.exports = {
     },
     
   },
-  pathPrefix: "/my-portfolio",
   plugins: [
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

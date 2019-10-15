@@ -12,6 +12,8 @@ export const query = graphql`
       description
       url
       tags
+      features
+      challenges
       image {
         childImageSharp {
           fluid {
@@ -35,6 +37,8 @@ const ProjectPage = ({ data: { projectsJson: project } }) => (
       title={project.title}
       imageData={project.image.childImageSharp.fluid}
       description={project.description}
+      features={project.features}
+      challenges={project.challenges}
       tags={project.tags}
       url={project.url}
     />

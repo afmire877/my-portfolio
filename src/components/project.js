@@ -95,7 +95,7 @@ const IconWrapper = Styled.span`
   margin-right: 10px;
 `;
 
-const ProjectPreview = ({ title, description, url, imageData, tags }) => (
+const ProjectPreview = ({ title, description, url, imageData, tags, features, challenges}) => (
   <div className="project">
     <Header>
       {title}
@@ -119,16 +119,11 @@ const ProjectPreview = ({ title, description, url, imageData, tags }) => (
       <Subheading row={1}>Overview</Subheading>
       <Description>{description}</Description>
       <Subheading row={2}>Challenges and what I learnt</Subheading>
-      <Challenges>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus sed distinctio, rerum excepturi iure incidunt, animi neque illum eum minima voluptatem qui enim libero repellat totam saepe culpa. Fugiat, laboriosam.
-      </Challenges>
+      <Challenges>{challenges}</Challenges>
       <Subheading row={3}>Key Features</Subheading>
       <Features>
         <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, esse.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, esse.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, esse.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, esse.</li>
+          {features.map((i) => <li>{i}</li>)}
         </ul>
       </Features>
 

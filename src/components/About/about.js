@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import Heading from '../Common/heading'
 import Styled from  'styled-components';
 import image from '../../../static/undraw.svg';
-import { device } from '../Common/desktop'
+import { device } from '../Common/desktop';
 
 
 
@@ -47,17 +47,20 @@ const Image = Styled.img`
 const About = () => {
     return (
         <Fragment>
+            
+
             <Heading title="About"/>
 
             <Content>
             <p>
-            I am a freelance front end developer/designer based in london. I am a former ESL teacher for 2 years. 
-            <Break />
-            I have always been a tech enthusiest, worte my first lines on code in c++ when I got my first laptop.  But unfortunately abandound it for teaching (for a while anyway), after descovering JavaScript. 
+            I am a freelance front end developer/designer based in London. I am a former ESL teacher for 2 years. 
+            <br />
+            I have always been a tech enthusiast, wrote my first lines of code in c++ when I got my first laptop.  But unfortunately abandoned it for teaching (for a while anyway), after discovering JavaScript. 
             </p>
 
             </Content>
             <Image src={image} />
+        
         </Fragment>
     )
 }
