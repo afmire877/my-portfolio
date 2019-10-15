@@ -27,7 +27,6 @@ const Header = Styled.div`
   padding: 50px;
   font-size: 3rem;
   font-weight: 600;
-  font-size: 1.4rem;
   @media ${device.mobileL} {
       padding: 10px;
     }
