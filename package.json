@@ -21,6 +21,7 @@
     "@material-ui/styles": "^4.4.3",
     "@tippy.js/react": "^3.0.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "contentful": "^7.10.0",
     "gatsby": "^2.1.0",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-material-ui": "^2.1.6",
@@ -40,6 +41,7 @@
     "react-particles-js": "^2.7.0",
     "react-reveal": "^1.2.2",
     "react-spinners": "^0.6.1",
+    "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^4.4.0"
   },

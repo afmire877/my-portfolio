@@ -1,60 +1,60 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ahmed Mire - Front end Developer - Portfolio',
+    title: "Ahmed Mire - Front end Developer - Portfolio",
     description: `
       This is a blog theme. The description will be showed in SEO results on pages
       without their own descriptions.
     `,
-    siteUrl: 'https://ahmedmire.com',
+    siteUrl: "https://ahmedmire.com",
     author: {
-      name: 'Ahmed Mire',
-      title: 'Freelance Front end Developer',
+      name: "Ahmed Mire",
+      title: "Freelance Front end Developer based in London",
       minibio: `
         I am a front end developer that loves automation.
-      `,
+      `
     },
     org: {
-      name: 'Level up Web design',
-      url: 'https://levelupweb.com',
-      logo: 'https://levelup.com/logo.png',
+      name: "Level up Web design",
+      url: "https://levelupweb.com",
+      logo: "https://levelup.com/logo.png"
     },
     social: {
-      twitter: 'https://twitter.com/fuadcodes',
-      github: 'https://github.com/afmire877',
-      linkedin: 'https://www.linkedin.com/in/ahmedmire',
-      medium: 'https://medium.com/@afmire877',
-      dev: 'https://dev.to/afmire877',
-      resume: 'https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1',
-      email: 'afmire877@gmail.com'
-
-    },
-    
+      twitter: "https://twitter.com/fuadcodes",
+      github: "https://github.com/afmire877",
+      linkedin: "https://www.linkedin.com/in/ahmedmire",
+      medium: "https://medium.com/@afmire877",
+      dev: "https://dev.to/afmire877",
+      resume: "https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1",
+      email: "afmire877@gmail.com"
+    }
   },
   plugins: [
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-transformer-json',
-    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: './data/'
+        path: "./data/"
       }
-    },  
-  //   {
-  //   resolve: `gatsby-source-filesystem`,
-  //   options: {
-  //     name: `img`,
-  //     path: `${__dirname}/src/img/`
-  //   }
-  //  },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+        ignore: [`**/\.*`] // ignore files starting with a dot
+      }
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
+    "gatsby-plugin-react-helmet",
+
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
         stylesProvider: {
-          injectFirst: true,
-        },
-      },
+          injectFirst: true
+        }
+      }
     },
     {
       resolve: `gatsby-source-rss-feed`,
@@ -65,13 +65,11 @@ module.exports = {
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
         parserOption: {
           customFields: {
-            item: ['itunes:duration']
+            item: ["itunes:duration"]
           }
         }
       }
     },
-    `gatsby-plugin-styled-components`,
-
-  ],
-  
+    `gatsby-plugin-styled-components`
+  ]
 };
