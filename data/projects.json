@@ -5,41 +5,58 @@
     "url": "https://alifcloud.com",
     "image": "./images/alif.png",
     "description": "A School Mangement System for local institutions to digitise and automate the admin tasks.",
-    "challenges" : "This project was a major learning lesson for me. I came across many different concepts Auth 2.0, Time Manipulation in JS  and web scraping. ",
+    "challenges": "",
     "features": [
       "Built a simple API using Node and Express to serve the database",
       "Worked with a team of 2 to develop this app"
-                ],
-    "tags": ["React","Nodejs", "mySQL", "JavaScript", "express" ],
+    ],
+    "tags": [
+      "React",
+      "Nodejs",
+      "mySQL",
+      "JavaScript",
+      "express"
+    ],
     "github": "sd-rota-automation"
-    
   },
   {
     "title": "SD Rota Automation App",
     "slug": "automation-app",
     "url": "",
     "image": "./images/project1.jpg",
-    "description": "A Nodejs productivity application to create google calender events after web scraping, using Puppeteer js, the Sports Direct Web App. ",
-    "challenges" : "This project was a major learning lesson for me. I came across many different concepts Auth 2.0, Time Manipulation in JS  and web scraping. ",
+    "description": "A Nodejs productivity terminal script, I wrote to automate the process of creating google calender events for my shifts at work. I found adding it to my calender was tedious so wrote a script with my new found powers . The script using puppetter.js web scraps the information of the Sports Direct Web App and parsers that information to create google calender event through the Calender API, authenticating the user through google's Auth 2.0",
+    "challenges": "This project was a major learning lesson for me. My biggest challenge was Auth and the Google API. I struggled to get Auth but after some late night research and diving into the google API documentation. I came up with a solution. I learnt how to use OAuth 2.0 in a real world application and the different time formats using which best use the data structure for the project. ",
     "features": [
       "Utilized Google Calender API and Auth0 2.0 to autheticate users",
-      "Puppeteer.js to scrape the web application"
-                ],
-    "tags": ["Nodejs", "Puppeteerjs", "JavaScript"],
+      "Puppeteer.js to scrape the web application",
+      "Moment.js Library for time manipulation"
+    ],
+    "tags": [
+      "Node.js",
+      "Puppeteer.js",
+      "JavaScript",
+      "RegExp"
+    ],
     "github": "sd-rota-automation"
-    
   },
   {
     "title": "Food Hunter",
     "slug": "food-hunter",
     "url": "https://afmire877.github.io/Food-Hunter-/",
     "image": "./images/Foodhunter.jpg",
-    "description": "An Vanilla JavaScript recipe search application utilizing powered by an API to provide recipes and filter them based on type of diet and calories. ",
-    "challenges" : "",
-    "features": ["Utilized Google Calender API and Auth0 2.0 to autheticate users"],
-    "tags": ["JavaScript (ES6)", "Webpack", "Babel", "Jest"],
+    "description": "An Vanilla JavaScript recipe search application powered by an API to provide recipes and filter them based on type of diet and calories.",
+    "challenges": "",
+    "features": [
+      "Utilized Google Calender API and Auth0 2.0 to autheticate users",
+      "Filter based on Diet type and Calorie range"
+    ],
+    "tags": [
+      "JavaScript (ES6)",
+      "Webpack",
+      "Babel",
+      "Jest"
+    ],
     "github": "Food-Hunter-"
-
   },
   {
     "title": "LEC Education",
@@ -47,14 +64,18 @@
     "url": "https://leceducation.co.uk",
     "image": "./images/leceducation.png",
     "description": "I designed and developed wordpress theme for a local business to create a better online presence and increase sign-ups for there business.",
-    "tags": ["Bootstrap", "Wordpress Theme"],
-    "challenges" : "I was tasked to establish a modern website that increased brand awareness and attracted new customers by increasing sign-ups. I started by doing brand research and developing the style guide using the existing logo. After that created a wireframe for the client.",
+    "tags": [
+      "Bootstrap",
+      "Wordpress Theme",
+      "Flickr API intergration"
+    ],
+    "challenges": "I was tasked to establish a modern website that increased brand awareness and attracted new customers by increasing sign-ups. I started by doing brand research and developing the style guide using the existing logo. After that created a wireframe for the client. I started the development process using Bootstrap and wordpress I started creating the theme using Underscores Wordpress starter theme to hit the ground running",
     "features": [
       "Worked with a local client to deliver a modern and responsive Wordpress theme",
       "Created a events page that can be customised by the client",
-      ""
-                ],
-    "github": "https://github.com/afmire877/sd-rota-automation"
+      "Created an Image montage using the filckr API to get images"
 
+    ],
+    "github": "lec-education"
   }
 ]

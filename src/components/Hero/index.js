@@ -4,16 +4,11 @@ import Styled from "styled-components";
 import Icon from "../Common/icons";
 import Particles from "react-particles-js";
 import { StaticQuery, graphql } from "gatsby";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faTwitter,
-  faGit
+  faTwitter
 } from "@fortawesome/free-brands-svg-icons";
-import Tooltip from "@material-ui/core/Tooltip";
-import Fade from "react-reveal/Fade";
-import VisbitlitySensor from "react-visibility-sensor";
 
 const Banner = Styled.div`
     grid-row: 1;
@@ -89,10 +84,9 @@ class Hero extends React.Component {
                   </h1>
                   <h2>{author.title}</h2>
                   <div className={styles.socialsIcons}>
-                    <Icon icon={faTwitter} href={social.twitter} />
-                    <Icon icon={faLinkedin} href={social.linkedin} />
-                    <Icon icon={faGithub} href={social.github} />
-                    <Icon icon={faFilePdf} href={social.resume} />
+                    <Icon icon={faTwitter} href={social.twitter} size="2x" />
+                    <Icon icon={faLinkedin} href={social.linkedin} size="2x" />
+                    <Icon icon={faGithub} href={social.github} size="2x" />
                   </div>
                 </Fragment>
               );

@@ -1,9 +1,9 @@
-import React from 'react';
-import './project.css'
-import { graphql } from 'gatsby';
-import Layout from '../components/layout/layout';
-import Project from '../components/project';
-import Styled from 'styled-components';
+import React from "react";
+import "./project.css";
+import { graphql } from "gatsby";
+import Layout from "../components/layout/layout";
+import Project from "../components/project";
+import Styled from "styled-components";
 
 export const query = graphql`
   query($slug: String!) {
@@ -14,6 +14,7 @@ export const query = graphql`
       tags
       features
       challenges
+      github
       image {
         childImageSharp {
           fluid {
@@ -28,11 +29,8 @@ const Hero = Styled.div`
   background: #2634F2;
 `;
 
-
 const ProjectPage = ({ data: { projectsJson: project } }) => (
-  <Layout
-    home={false}
-  >
+  <Layout home={false}>
     <Project
       title={project.title}
       imageData={project.image.childImageSharp.fluid}
@@ -41,6 +39,7 @@ const ProjectPage = ({ data: { projectsJson: project } }) => (
       challenges={project.challenges}
       tags={project.tags}
       url={project.url}
+      github={project.github}
     />
   </Layout>
 );

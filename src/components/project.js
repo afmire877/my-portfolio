@@ -1,12 +1,19 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Image from 'gatsby-image';
-import Styled from 'styled-components';
-import Button from '@material-ui/core/Button';
-import Icon from './Common/icons'
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import { device } from './Common/desktop';
-
+import React from "react";
+import { Link } from "gatsby";
+import Image from "gatsby-image";
+import Styled from "styled-components";
+import Button from "@material-ui/core/Button";
+import Icon from "./Common/icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faArrowAltCircleLeft,
+  faArrowCircleRight,
+  faArrowCircleLeft
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { device } from "./Common/desktop";
+import { css } from "@emotion/core";
 
 const ContentWrapper = Styled.div`
   display: grid;
@@ -36,12 +43,12 @@ const Subheading = Styled.h3`
   grid-column: 1/4;
   
   @media ${device.mobileL} {
-        grid-row: ${props => props.row !== 1 ? props.row +1 : 1 };
-        grid-row: ${props => props.row === 3 ? 6  : '' };
+        grid-row: ${props => (props.row !== 1 ? props.row + 1 : 1)};
+        grid-row: ${props => (props.row === 3 ? 6 : "")};
         grid-column: 1/13;
 
     }
-`
+`;
 
 const Description = Styled.p`
   grid-row: 1;
@@ -92,25 +99,59 @@ const Tags = Styled.div`
 `;
 
 const IconWrapper = Styled.span`
-  margin-right: 10px;
+  ;
 `;
 
-const ProjectPreview = ({ title, description, url, imageData, tags, features, challenges}) => (
+const ProjectPreview = ({
+  title,
+  description,
+  url,
+  imageData,
+  tags,
+  features,
+  challenges,
+  github
+}) => (
   <div className="project">
     <Header>
       {title}
       <div>
         <Tags>
-          {tags.map((tag, i)=> (<span key={`tag-${tag}`}>{i === tags.length-1 ? `${tag}` : `${tag}, `}</span>))}
+          {tags.map((tag, i) => (
+            <span key={`tag-${tag}`}>
+              {i === tags.length - 1 ? `${tag}` : `${tag}, `}
+            </span>
+          ))}
         </Tags>
-        <Button size="small" href={`https://github.com/afmire877/`} color="primary">
-          <IconWrapper>
-            <Icon icon={faGithub} size="2x" /> 
-          </IconWrapper>
-            View Source
+        <Button
+          css={css`
+            box-shadow: 1px 1px 3px 0px grey;
+            padding: 10px;
+            margin-right: 30px;
+          `}
+          size="small"
+          href={`https://github.com/afmire877/${github}`}
+          color="primary"
+        >
+          <Icon
+            css={css`
+              margin-right: 10px;
+            `}
+            icon={faGithub}
+            size="lg"
+          />
+          View Source
         </Button>
-        <Button size="small" href={url} color="primary">
-        Demo
+        <Button
+          css={css`
+            box-shadow: 1px 1px 3px 0px grey;
+            padding: 10px;
+          `}
+          size="small"
+          href={url}
+          color="primary"
+        >
+          Go to Site
         </Button>
       </div>
     </Header>
@@ -123,19 +164,36 @@ const ProjectPreview = ({ title, description, url, imageData, tags, features, ch
       <Subheading row={3}>Key Features</Subheading>
       <Features>
         <ul>
-          {features.map((i) => <li>{i}</li>)}
+          {features.map(i => (
+            <li>{i}</li>
+          ))}
         </ul>
       </Features>
+    </ContentWrapper>
+    <p>
+      <Button href={url}>
+        View this project online{" "}
+        <Icon
+          css={css`
+            margin-left: 10px;
+          `}
+          icon={faArrowCircleRight}
+          size="sm"
+        />
+      </Button>
+    </p>
 
-      </ContentWrapper>
-      <p>
-        <a href={url}>View this project online &rarr;</a>
-      </p>
-
-      <p>
-        <Link to="/">&larr; back to all projects</Link>
-      </p>
-
+    <Button>
+      <Icon
+        css={css`
+          margin-right: 10px;
+        `}
+        href="/"
+        icon={faArrowCircleLeft}
+        size="sm"
+      />
+      back to all projects
+    </Button>
   </div>
 );
 

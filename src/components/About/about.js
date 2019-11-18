@@ -61,12 +61,11 @@ grid-column: 1/13;
 const About = () => {
   return (
     <Fragment>
-      <Heading title="About" />
+      <Heading id="about" title="About" />
       <Content>
         <div>
           <Paragraph>
-            I am a self-taught front-end develoParagrapher/designer based in
-            London. And{" "}
+            I am a self-taught front-end developer/designer based in London. And{" "}
             <Typed
               loop
               style={{

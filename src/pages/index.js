@@ -1,12 +1,10 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/layout/layout';
-import Contact from '../components/Contact/Contact';
-import Hero from '../components/Hero/index';
-import Projects from '../components/Projects/projects';
-import About from '../components/About/about';
-import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout/layout";
+import Contact from "../components/Contact/Contact";
+import Hero from "../components/Hero/index";
+import Projects from "../components/Projects/projects";
+import About from "../components/About/about";
 
 export const query = graphql`
   {
@@ -30,19 +28,15 @@ export const query = graphql`
     }
   }
 `;
- 
 
 export default ({ data }) => (
   <div>
-  <Layout
-    home={true}
-    >
-    <Hero />
-    <Projects data={data} />
+    <Layout home={true}>
+      <Hero />
+      <Projects data={data} />
 
-    <About />
-  </Layout>
-  <Contact />
+      <About />
+    </Layout>
+    <Contact />
   </div>
-
 );

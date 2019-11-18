@@ -1,8 +1,8 @@
 // import './projects.css';
-import React, { Fragment } from 'react';
-import ProjectPreview from '../project-preview';
-import Heading from '../Common/heading';
-import Styled from 'styled-components';
+import React, { Fragment } from "react";
+import ProjectPreview from "../project-preview";
+import Heading from "../Common/heading";
+import Styled from "styled-components";
 
 const Project = Styled.div`
     grid-column: 2/12;
@@ -19,30 +19,26 @@ const Project = Styled.div`
     }
 `;
 
-
- 
-
 const Projects = ({ data }) => {
-    return (
-        <Fragment>
-            <Heading title="Projects" />
-            <Project >
-            {data.allProjectsJson.edges.map(({ node: project }) => (
-                <ProjectPreview
-                key={`preview-${project.slug}`}
-                title={project.title}
-                description={project.description}
-                slug={project.slug}
-                imageData={project.image.childImageSharp.fluid}
-                tags={project.tags}
-                github={project.github}
-                url={project.url}
-                />
-            ))}
-            </Project>
-        </Fragment>
-    );
-}
+  return (
+    <Fragment>
+      <Heading id="projects" title="Projects" />
+      <Project>
+        {data.allProjectsJson.edges.map(({ node: project }) => (
+          <ProjectPreview
+            key={`preview-${project.slug}`}
+            title={project.title}
+            description={project.description}
+            slug={project.slug}
+            imageData={project.image.childImageSharp.fluid}
+            tags={project.tags}
+            github={project.github}
+            url={project.url}
+          />
+        ))}
+      </Project>
+    </Fragment>
+  );
+};
 
 export default Projects;
-
