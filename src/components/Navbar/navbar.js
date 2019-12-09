@@ -58,37 +58,10 @@ const NavBar = ({ home }) => {
         </Link>
       </h1>
       <Nav home={home}>
-        <AnchorLink
-          to="projects"
-          smooth
-          spy
-          offset={-90}
-          duration={500}
-          isFrontPage={home}
-        >
-          projects
-        </AnchorLink>
+        <a href="#projects">projects</a>
 
-        <AnchorLink
-          to="about"
-          isFrontPage={home}
-          smooth
-          spy
-          offset={-90}
-          duration={500}
-        >
-          about
-        </AnchorLink>
-        <AnchorLink
-          to="contact"
-          isFrontPage={home}
-          smooth
-          spy
-          offset={-90}
-          duration={500}
-        >
-          contact
-        </AnchorLink>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
         <a href="https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1">
           resume
         </a>

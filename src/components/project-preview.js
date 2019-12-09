@@ -55,9 +55,6 @@ function ProjectPreview({
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {description}
-          </Typography>
 
           {tags.map((tag, i) => {
             return (

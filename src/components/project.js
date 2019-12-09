@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import Image from "gatsby-image";
 import Styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import Icon from "./Common/icons";
 import {
-  faArrowLeft,
-  faArrowRight,
+  // faArrowLeft,
+  // faArrowRight,
   faArrowAltCircleLeft,
   faArrowCircleRight,
   faArrowCircleLeft
@@ -41,6 +41,8 @@ const Header = Styled.div`
 const Subheading = Styled.h3`
   grid-row: ${props => props.row};
   grid-column: 1/4;
+  font-weight: bold;
+  color: #2835F1;
   
   @media ${device.mobileL} {
         grid-row: ${props => (props.row !== 1 ? props.row + 1 : 1)};
@@ -97,9 +99,20 @@ const Tags = Styled.div`
         font-size: 1rem;
     }
 `;
+const Links = Styled.div`
+        display: flex;
+        justify-content: space-around;
+        margin: 40px;
+        padding: 20px;
+        @media ${device.mobileL} {
+          margin: 10px 0;
+          padding: 20px 0; 
+          font-size: 1rem;
+          }
+`;
 
 const IconWrapper = Styled.span`
-  ;
+  
 `;
 
 const ProjectPreview = ({
@@ -170,30 +183,28 @@ const ProjectPreview = ({
         </ul>
       </Features>
     </ContentWrapper>
-    <p>
-      <Button href={url}>
-        View this project online{" "}
+    <Links>
+      <Button href="/">
         <Icon
           css={css`
-            margin-left: 10px;
+            margin-right: 10px;
           `}
-          icon={faArrowCircleRight}
+          icon={faArrowCircleLeft}
           size="sm"
         />
+        back to all projects
       </Button>
-    </p>
-
-    <Button>
-      <Icon
+      <Button
         css={css`
-          margin-right: 10px;
+          display: flex;
+          justify-content: space-around;
         `}
-        href="/"
-        icon={faArrowCircleLeft}
-        size="sm"
-      />
-      back to all projects
-    </Button>
+        href={url}
+      >
+        <span>View this project online</span>
+        <Icon icon={faArrowCircleRight} size="sm" />
+      </Button>
+    </Links>
   </div>
 );
 

@@ -10,14 +10,8 @@
       "Built a simple API using Node and Express to serve the database",
       "Worked with a team of 2 to develop this app"
     ],
-    "tags": [
-      "React",
-      "Nodejs",
-      "mySQL",
-      "JavaScript",
-      "express"
-    ],
-    "github": "sd-rota-automation"
+    "tags": ["React", "Nodejs", "mySQL", "JavaScript", "express"],
+    "github": "school-management-app"
   },
   {
     "title": "SD Rota Automation App",
@@ -31,12 +25,7 @@
       "Puppeteer.js to scrape the web application",
       "Moment.js Library for time manipulation"
     ],
-    "tags": [
-      "Node.js",
-      "Puppeteer.js",
-      "JavaScript",
-      "RegExp"
-    ],
+    "tags": ["Node.js", "Puppeteer.js", "JavaScript", "RegExp"],
     "github": "sd-rota-automation"
   },
   {
@@ -50,12 +39,7 @@
       "Utilized Google Calender API and Auth0 2.0 to autheticate users",
       "Filter based on Diet type and Calorie range"
     ],
-    "tags": [
-      "JavaScript (ES6)",
-      "Webpack",
-      "Babel",
-      "Jest"
-    ],
+    "tags": ["JavaScript (ES6)", "Webpack", "Babel", "Jest"],
     "github": "Food-Hunter-"
   },
   {
@@ -64,17 +48,12 @@
     "url": "https://leceducation.co.uk",
     "image": "./images/leceducation.png",
     "description": "I designed and developed wordpress theme for a local business to create a better online presence and increase sign-ups for there business.",
-    "tags": [
-      "Bootstrap",
-      "Wordpress Theme",
-      "Flickr API intergration"
-    ],
+    "tags": ["Bootstrap", "Wordpress Theme", "Flickr API intergration"],
     "challenges": "I was tasked to establish a modern website that increased brand awareness and attracted new customers by increasing sign-ups. I started by doing brand research and developing the style guide using the existing logo. After that created a wireframe for the client. I started the development process using Bootstrap and wordpress I started creating the theme using Underscores Wordpress starter theme to hit the ground running",
     "features": [
       "Worked with a local client to deliver a modern and responsive Wordpress theme",
       "Created a events page that can be customised by the client",
       "Created an Image montage using the filckr API to get images"
-
     ],
     "github": "lec-education"
   }

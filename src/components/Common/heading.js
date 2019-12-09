@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 // import './heading.css';
-import Styled from 'styled-components';
-import { device } from './desktop';
+import Styled from "styled-components";
+import { device } from "./desktop";
 
 const Subheading = Styled.h1`
     &::after {
@@ -33,10 +33,8 @@ const Subheading = Styled.h1`
 
 `;
 
-const Heading = ({ title }) => {
-    return (
-        <Subheading>{title}</Subheading>
-    )
-}
+const Heading = ({ title, id }) => {
+  return <Subheading id={id}>{title}</Subheading>;
+};
 
 export default Heading;

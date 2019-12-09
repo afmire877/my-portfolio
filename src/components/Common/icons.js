@@ -1,14 +1,12 @@
 import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "@material-ui/core/Link";
 
 class Icon extends React.Component {
   render() {
-    return (
-      <Link href={this.props.href}>
-        <FontAwesomeIcon icon={this.props.icon} size={this.props.size} />
-      </Link>
-    );
+    const { href, icon, size } = this.props;
+    return <FontAwesomeIcon icon={icon} size={size} />;
   }
 }
 Icon.defaultProps = {

@@ -23,6 +23,9 @@ const Banner = Styled.div`
     display:grid;
     grid-gap: 15px;
 `;
+const IconWrapper = Styled.a`
+  margin-left: 10px;
+`;
 
 class Hero extends React.Component {
   render() {
@@ -84,9 +87,15 @@ class Hero extends React.Component {
                   </h1>
                   <h2>{author.title}</h2>
                   <div className={styles.socialsIcons}>
-                    <Icon icon={faTwitter} href={social.twitter} size="2x" />
-                    <Icon icon={faLinkedin} href={social.linkedin} size="2x" />
-                    <Icon icon={faGithub} href={social.github} size="2x" />
+                    <IconWrapper href={social.twitter}>
+                      <Icon icon={faTwitter} size="2x" />
+                    </IconWrapper>
+                    <IconWrapper href={social.linkedin}>
+                      <Icon icon={faLinkedin} size="2x" />
+                    </IconWrapper>
+                    <IconWrapper href={social.github}>
+                      <Icon icon={faGithub} size="2x" />
+                    </IconWrapper>
                   </div>
                 </Fragment>
               );

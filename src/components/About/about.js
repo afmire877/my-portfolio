@@ -4,7 +4,6 @@ import Heading from "../Common/heading";
 import Styled from "styled-components";
 import { device } from "../Common/desktop";
 import Typed from "react-typed";
-import images from "../Common/images";
 import { Container, Tooltip } from "@material-ui/core";
 
 const Content = Styled.div`
@@ -31,8 +30,9 @@ const Paragraph = Styled.p`
 const IconWrapper = Styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+
 `;
 
 const SkillsIcons = Styled.img`
