@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import Logo from "./../../../static/logo.svg";
 import Styled from "styled-components";
 import { device } from "../Common/desktop";
-
 const Nav = Styled.nav`
     display: flex;
     justify-content: flex-end;
@@ -49,7 +48,6 @@ const Header = Styled.header`
 `;
 
 const NavBar = ({ home }) => {
-  console.log(this);
   return (
     <Header home={home}>
       <h1>
@@ -59,7 +57,6 @@ const NavBar = ({ home }) => {
       </h1>
       <Nav home={home}>
         <a href="#projects">projects</a>
-
         <a href="#about">about</a>
         <a href="#contact">contact</a>
         <a href="https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1">

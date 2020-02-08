@@ -65,25 +65,6 @@ function ProjectPreview({
           })}
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button
-          size="small"
-          href={`https://github.com/afmire877/${github}`}
-          color="primary"
-        >
-          <IconWrapper>
-            <Icon icon={faGithub} size="2x" />
-          </IconWrapper>
-          View Source
-        </Button>
-        {url ? (
-          <Button size="small" href={url} color="primary">
-            Demo
-          </Button>
-        ) : (
-          ""
-        )}
-      </CardActions>
     </Card>
   );
 }

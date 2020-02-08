@@ -34,7 +34,6 @@ export default ({ data }) => (
     <Layout home={true}>
       <Hero />
       <Projects data={data} />
-
       <About />
     </Layout>
     <Contact />

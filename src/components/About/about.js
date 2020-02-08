@@ -66,6 +66,7 @@ const About = () => {
         <div>
           <Paragraph>
             I am a self-taught front-end developer/designer based in London. And{" "}
+            
             <Typed
               loop
               style={{
