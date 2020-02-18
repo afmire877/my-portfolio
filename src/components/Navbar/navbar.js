@@ -1,9 +1,9 @@
-import React, { Children } from "react";
-import { Link as AnchorLink, animateScroll as scroll } from "react-scroll";
-import { Link } from "gatsby";
+import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Logo from "./../../../static/logo.svg";
 import Styled from "styled-components";
 import { device } from "../Common/desktop";
+
 const Nav = Styled.nav`
     display: flex;
     justify-content: flex-end;
@@ -51,14 +51,18 @@ const NavBar = ({ home }) => {
   return (
     <Header home={home}>
       <h1>
-        <Link to="/">
+        <a href="/">
           <Img home={home} src={Logo} alt="logo" />
-        </Link>
+        </a>
       </h1>
       <Nav home={home}>
-        <a href="#projects">projects</a>
-        <a href="#about">about</a>
-        <a href="#contact">contact</a>
+        <Link to="projects" onClick={() => scroll.scrollTo()}>
+          projects
+        </Link>
+        <Link to="about">about</Link>
+        <Link to="contact" onClick={() => scroll.scrollToBottom()}>
+          contact
+        </Link>
         <a href="https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1">
           resume
         </a>

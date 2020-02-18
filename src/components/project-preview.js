@@ -4,11 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import Styled from "styled-components";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
+
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Icon from "./Common/icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 import Typography from "@material-ui/core/Typography";
 
 const Tags = Styled.span`
@@ -20,9 +18,7 @@ const Tags = Styled.span`
   
 
 `;
-const IconWrapper = Styled.span`
-  margin-right: 10px;
-`;
+
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,

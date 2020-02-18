@@ -57,6 +57,10 @@ const Heading = Styled.h1`
 margin: 30px 0 20px 0;
 `;
 
+const IconWrapper = Styled.a`
+  margin-left: 10px;
+`;
+
 export default () => {
   return (
     <StaticQuery
@@ -92,10 +96,18 @@ export default () => {
             <a href={`mailto:${social.email}`}>{social.email}</a>
           </MailLink>
           <IconLinks>
-            <Icon href={social.github} icon={faGithub} />
-            <Icon href={social.twitter} icon={faTwitter} size="3x" />
-            <Icon href={social.linkedin} icon={faLinkedin} size="3x" />
-            <Icon href={social.resume} icon={faFilePdf} size="3x" />
+            <IconWrapper href={social.github}>
+              <Icon icon={faGithub} />
+            </IconWrapper>
+            <IconWrapper href={social.twitter}>
+              <Icon icon={faTwitter} size="3x" />
+            </IconWrapper>
+            <IconWrapper href={social.linkedin}>
+              <Icon icon={faLinkedin} size="3x" />
+            </IconWrapper>
+            <IconWrapper href={social.resume}>
+              <Icon icon={faFilePdf} size="3x" />
+            </IconWrapper>
           </IconLinks>
         </Wrapper>
       )}
