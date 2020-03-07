@@ -17,6 +17,7 @@
     "@emotion/styled": "^10.0.23",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@material-ui/core": "^4.4.2",
@@ -26,6 +27,7 @@
     "@tippy.js/react": "^3.0.1",
     "babel-plugin-styled-components": "^1.10.6",
     "contentful": "^7.10.0",
+    "core-js": "^2.6.11",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-catch-links": "^2.1.25",
@@ -43,6 +45,7 @@
     "gatsby-transformer-remark": "^2.6.36",
     "gatsby-transformer-sharp": "^2.1.13",
     "particles.js": "^2.0.0",
+    "prebuild-install": "^5.3.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-helmet": "^5.2.1",
@@ -52,8 +55,11 @@
     "react-spinners": "^0.6.1",
     "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
+    "sharp": "^0.24.1",
     "styled-components": "^4.4.1",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.2.52",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "repository": {
     "type": "git",

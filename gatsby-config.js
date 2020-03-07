@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: "https://ahmedmire.com",
     author: {
       name: "Ahmed Mire",
-      title: "Freelance Front end Developer based in London",
+      title: "Front end Developer based in London",
       minibio: `
         I am a front end developer that loves automation.
       `
