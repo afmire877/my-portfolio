@@ -8,13 +8,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "clean": "rm -rf .cache",
     "serve": "gatsby serve",
     "deploy": "gatsby build  && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.23",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.1",
     "@fortawesome/free-regular-svg-icons": "^5.12.1",
@@ -31,7 +30,6 @@
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-catch-links": "^2.1.25",
-    "gatsby-plugin-emotion": "^4.1.15",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-mdx": "^1.0.70",
     "gatsby-plugin-react-helmet": "^3.1.22",
@@ -49,6 +47,7 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-helmet": "^5.2.1",
+    "react-html-parser": "^2.0.2",
     "react-particles-js": "^2.7.0",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.16",
@@ -57,7 +56,6 @@
     "react-visibility-sensor": "^5.1.1",
     "sharp": "^0.24.1",
     "styled-components": "^4.4.1",
-    "theme-ui": "^0.2.52",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
@@ -69,7 +67,12 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "babel-jest": "^25.1.0",
+    "babel-preset-gatsby": "^0.2.35",
+    "gh-pages": "^2.1.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
+    "react-test-renderer": "^16.13.0"
   },
   "quokka": {
     "babel": true

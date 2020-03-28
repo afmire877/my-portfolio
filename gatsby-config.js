@@ -55,7 +55,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
-    `gatsby-plugin-emotion`,
+
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

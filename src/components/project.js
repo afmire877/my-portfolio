@@ -1,19 +1,15 @@
-import React from "react";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faArrowCircleLeft,
+  faArrowCircleRight
+} from "@fortawesome/free-solid-svg-icons";
+import Button from "@material-ui/core/Button";
 // import { Link } from "gatsby";
 import Image from "gatsby-image";
+import React from "react";
 import Styled from "styled-components";
-import Button from "@material-ui/core/Button";
-import Icon from "./Common/icons";
-import {
-  // faArrowLeft,
-  // faArrowRight,
-  faArrowAltCircleLeft,
-  faArrowCircleRight,
-  faArrowCircleLeft
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { device } from "./Common/desktop";
-import { css } from "@emotion/core";
+import Icon from "./Common/icons";
 
 const ContentWrapper = Styled.div`
   display: grid;
@@ -137,7 +133,7 @@ const ProjectPreview = ({
           ))}
         </Tags>
         <Button
-          css={css`
+          css={`
             box-shadow: 1px 1px 3px 0px grey;
             padding: 10px;
             margin-right: 30px;
@@ -147,7 +143,7 @@ const ProjectPreview = ({
           color="primary"
         >
           <Icon
-            css={css`
+            css={`
               margin-right: 10px;
             `}
             icon={faGithub}
@@ -156,7 +152,7 @@ const ProjectPreview = ({
           View Source
         </Button>
         <Button
-          css={css`
+          css={`
             box-shadow: 1px 1px 3px 0px grey;
             padding: 10px;
           `}
@@ -186,7 +182,7 @@ const ProjectPreview = ({
     <Links>
       <Button href="/">
         <Icon
-          css={css`
+          css={`
             margin-right: 10px;
           `}
           icon={faArrowCircleLeft}
@@ -195,7 +191,7 @@ const ProjectPreview = ({
         back to all projects
       </Button>
       <Button
-        css={css`
+        css={`
           display: flex;
           justify-content: space-around;
         `}
