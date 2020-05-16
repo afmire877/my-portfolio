@@ -36,7 +36,6 @@
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-plugin-styled-components": "^3.1.6",
     "gatsby-source-filesystem": "^2.0.20",
-    "gatsby-source-medium": "file:gatsby-source-medium-2.1.6-patch.tgz",
     "gatsby-source-rss": "^1.0.0",
     "gatsby-source-rss-feed": "^1.1.1",
     "gatsby-transformer-json": "^2.1.8",
