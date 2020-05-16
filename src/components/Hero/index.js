@@ -7,8 +7,11 @@ import { StaticQuery, graphql } from "gatsby";
 import {
   faGithub,
   faLinkedin,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 const Banner = Styled.div`
     grid-row: 1;
@@ -36,20 +39,20 @@ class Hero extends React.Component {
           params={{
             particles: {
               number: {
-                value: 50
+                value: 50,
               },
               size: {
-                value: 3
-              }
+                value: 3,
+              },
             },
             interactivity: {
               events: {
                 onhover: {
                   enable: true,
-                  mode: "repulse"
-                }
-              }
-            }
+                  mode: "repulse",
+                },
+              },
+            },
           }}
         ></Particles>
 
@@ -77,8 +80,8 @@ class Hero extends React.Component {
             `}
             render={({
               site: {
-                siteMetadata: { author, social }
-              }
+                siteMetadata: { author, social },
+              },
             }) => {
               return (
                 <Fragment>
