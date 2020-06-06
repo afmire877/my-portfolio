@@ -13,48 +13,5 @@
       "Created an Image montage using the filckr API to get images"
     ],
     "github": "lec-education"
-  },
-  {
-    "title": "SD Rota Automation App",
-    "slug": "automation-app",
-    "url": "",
-    "image": "./images/project1.jpg",
-    "description": "A Nodejs productivity terminal script, I wrote to automate the process of creating google calender events for my shifts at work. I found adding it to my calender was tedious so wrote a script with my new found powers . The script using puppetter.js web scraps the information of the Sports Direct Web App and parsers that information to create google calender event through the Calender API, authenticating the user through google's Auth 2.0",
-    "challenges": "This project was a major learning lesson for me. My biggest challenge was Auth and the Google API. I struggled to get Auth but after some late night research and diving into the google API documentation. I came up with a solution. I learnt how to use OAuth 2.0 in a real world application and the different time formats using which best use the data structure for the project. ",
-    "features": [
-      "Utilized Google Calender API and Auth0 2.0 to autheticate users",
-      "Puppeteer.js to scrape the web application",
-      "Moment.js Library for time manipulation"
-    ],
-    "tags": ["Node.js", "Puppeteer.js", "JavaScript", "RegEx"],
-    "github": "sd-rota-automation"
-  },
-  {
-    "title": "Food Hunter",
-    "slug": "food-hunter",
-    "url": "https://afmire877.github.io/Food-Hunter-/",
-    "image": "./images/Foodhunter.jpg",
-    "description": "An Vanilla JavaScript recipe search application powered by an API to provide recipes and filter them based on type of diet and calories.",
-    "challenges": "",
-    "features": [
-      "Utilized Google Calender API and Auth0 2.0 to autheticate users",
-      "Filter based on Diet type and Calorie range"
-    ],
-    "tags": ["JavaScript (ES6)", "Webpack", "Babel", "Jest"],
-    "github": "Food-Hunter-"
-  },
-  {
-    "title": "Alif Cloud",
-    "slug": "alif-cloud",
-    "url": "https://alifcloud.com",
-    "image": "./images/alif.png",
-    "description": "A School Mangement System for local institutions to digitise and automate the admin tasks.",
-    "challenges": "",
-    "features": [
-      "Built a simple API using Node and Express to serve the database",
-      "Worked with a team of 2 to develop this app"
-    ],
-    "tags": ["React", "Nodejs", "mySQL", "JavaScript", "express"],
-    "github": "school-management-app"
   }
 ]
