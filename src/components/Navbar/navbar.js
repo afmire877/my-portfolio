@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
 import Logo from "./../../../static/logo.svg";
 import Styled from "styled-components";
 import { device } from "../Common/desktop";
@@ -9,14 +8,14 @@ const Nav = Styled.nav`
     justify-content: flex-end;
     grid-column: 6 / 12;
     align-items: center;
-    display: ${props => (props.home ? "" : "none")};
+    display: ${(props) => (props.home ? "" : "none")};
 
     & a {
     margin-left: 40px;
     font-size: 1rem;
     text-transform: lowercase;
     text-decoration: none;
-    color: ${props => (props.home ? "white" : "#2634F2")};
+    color: ${(props) => (props.home ? "white" : "#2634F2")};
 
     }
     @media ${device.mobileL} {
@@ -32,8 +31,8 @@ const Img = Styled.img`
 `;
 const Header = Styled.header`
 
-    position: ${props => (props.home ? "absolute" : "")};
-    filter: ${props =>
+    position: ${(props) => (props.home ? "absolute" : "")};
+    filter: ${(props) =>
       props.home
         ? ""
         : "invert(82%) sepia(99%) saturate(6787%) hue-rotate(243deg) brightness(95%) contrast(99%)"};
@@ -56,16 +55,9 @@ const NavBar = ({ home }) => {
         </a>
       </h1>
       <Nav home={home}>
-        <Link to="projects" onClick={() => scroll.scrollTo()}>
-          projects
-        </Link>
-        <Link to="about">about</Link>
-        <Link to="contact" onClick={() => scroll.scrollToBottom()}>
-          contact
-        </Link>
-        <a href="https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1">
-          resume
-        </a>
+        <a href="#projects">projects</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
       </Nav>
     </Header>
   );

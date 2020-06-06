@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
 const Banner = Styled.div`
@@ -73,6 +74,7 @@ class Hero extends React.Component {
                       linkedin
                       medium
                       dev
+                      email
                     }
                   }
                 }
@@ -98,6 +100,9 @@ class Hero extends React.Component {
                     </IconWrapper>
                     <IconWrapper href={social.github}>
                       <Icon icon={faGithub} size="2x" />
+                    </IconWrapper>
+                    <IconWrapper href={`mailto:${social.email}`}>
+                      <Icon icon={faEnvelope} size="2x" />
                     </IconWrapper>
                   </div>
                 </Fragment>

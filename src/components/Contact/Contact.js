@@ -1,10 +1,10 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Icon from "../Common/icons";
 import Styled from "styled-components";
@@ -83,8 +83,8 @@ export default () => {
       `}
       render={({
         site: {
-          siteMetadata: { social }
-        }
+          siteMetadata: { social },
+        },
       }) => (
         <Wrapper>
           <Heading id="contact">Contact </Heading>
@@ -105,8 +105,8 @@ export default () => {
             <IconWrapper href={social.linkedin}>
               <Icon icon={faLinkedin} size="3x" />
             </IconWrapper>
-            <IconWrapper href={social.resume}>
-              <Icon icon={faFilePdf} size="3x" />
+            <IconWrapper href={`mailto:${social.email}`}>
+              <Icon icon={faEnvelope} size="3x" />
             </IconWrapper>
           </IconLinks>
         </Wrapper>

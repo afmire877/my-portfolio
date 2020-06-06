@@ -1,5 +1,6 @@
 const path = require(`path`);
 exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
   const result = await graphql(`
     {
       allProjectsJson {
@@ -17,19 +18,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const projects = result.data.allProjectsJson.edges;
-  projects.forEach(({ node: { slug } }) => {
-    actions.createPage({
+  result.data.allProjectsJson.edges.forEach(({ node: { slug } }) => {
+    createPage({
       path: `/${slug}/`,
       component: require.resolve("./src/templates/project.js"),
-      context: { slug }
+      context: { slug },
     });
   });
-};
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`);
-  const result = await graphql(`
+
+  const blogresult = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -39,6 +36,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+              status
+              description
+              date
             }
           }
         }
@@ -46,15 +46,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `);
   // Handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
+  if (blogresult.errors) {
+    reporter.panicOnBuild(`Error while running loading Blog posts.`);
     return;
   }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {} // additional data can be passed via context
-    });
+  blogresult.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    if (node.frontmatter.status) {
+      createPage({
+        path: node.frontmatter.path,
+        component: path.resolve(`src/templates/blogTemplate.js`),
+        context: {}, // additional data can be passed via context
+      });
+    }
   });
 };

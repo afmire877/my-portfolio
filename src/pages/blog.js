@@ -2,13 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import Styled from "styled-components";
-import Meta from "../components/blogMeta";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-
 import ReadMins from "../components/readMins";
 
 export const query = graphql`
@@ -20,6 +13,7 @@ export const query = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            status
             path
           }
           timeToRead
@@ -34,36 +28,33 @@ const BlogPage = ({ data }) => {
   return (
     <div>
       <Layout home={false} style={{ backgroundColor: "#f8f8f8" }}>
-        {posts.map(item => {
+        {posts.map((item, index) => {
           const { excerpt, frontmatter, timeToRead } = item.node;
           console.log(item.node);
-          console.log("------------------");
           return (
-            <a
-              href={frontmatter.path}
-              css={`
-                grid-column: 3/12;
-                color: black;
-                font-size: 0.8rem;
-                text-decoration: none;
-                display: grid;
-                grid-template-columns: repeat(8, 1fr);
-                padding: 20px;
-                border-radius: 5px;
-              `}
-            >
-              <Title>{frontmatter.title}</Title>
+            frontmatter.status && (
+              <BlogItem href={frontmatter.path} key={index}>
+                <Title>{frontmatter.title}</Title>
 
-              <Meta date={frontmatter.date} timeToRead={timeToRead} />
-              <p
-                css={`
-                  margin-top: 30px;
-                  grid-column: 1/9;
-                `}
-              >
-                {excerpt}
-              </p>
-            </a>
+                <div
+                  css={`
+                    grid-column: 1/8;
+                    display: flex;
+                  `}
+                >
+                  <p
+                    css={`
+                      margin-right: 30px;
+                    `}
+                  >
+                    {frontmatter.date}
+                  </p>
+                  <ReadMins time={timeToRead} />
+                </div>
+
+                <Excerpt>{excerpt}</Excerpt>
+              </BlogItem>
+            )
           );
         })}
       </Layout>
@@ -72,22 +63,34 @@ const BlogPage = ({ data }) => {
 };
 
 // const BlogItem = Styled.a;
-const Tag = Styled.a`
-    display: FLEX;
-    justify-content: CENTER;
-    align-items: CENTER;
-    align-self: CENTER;
-    grid-column: 8/9;
-    width: 100%;
+// const Tag = Styled.a`
+//     display: FLEX;
+//     justify-content: CENTER;
+//     align-items: CENTER;
+//     align-self: CENTER;
+//     grid-column: 8/9;
+//     width: 100%;
+//     color: black;
+//     background: #F0DB4F;
+//     border-radius: 16.5px;
+//     padding: 10px;
+//     -webkit-text-decoration: none;
+//     text-decoration: none;
+//     max-height: 35px;
+//     font-size: 0.9rem;
+//     text-align: center;
+// `;
+
+const BlogItem = Styled.a`
+    grid-column: 3/12;
     color: black;
-    background: #F0DB4F; 
-    border-radius: 16.5px;
-    padding: 10px;
-    -webkit-text-decoration: none;
+    font-size: 0.8rem;
     text-decoration: none;
-    max-height: 35px;
-    font-size: 0.9rem;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 20px;
+    border-radius: 5px;
+    grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
 `;
 
 const Title = Styled.h1`
@@ -99,7 +102,8 @@ const Title = Styled.h1`
 `;
 
 const Excerpt = Styled.p`
-
+        margin-top: 30px;
+        grid-column: 1/9;
 `;
 
 export default BlogPage;

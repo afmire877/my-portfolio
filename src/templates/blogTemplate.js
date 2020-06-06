@@ -1,17 +1,16 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import Styled, { createGlobalStyle } from "styled-components";
 import NavBar from "../components/Navbar/navbar";
 import Meta from "../components/blogMeta";
 import { blogStyles } from "../components/utils/typography";
-import ReadMins from "../components/readMins";
 import ReactHtmlParser from "react-html-parser";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html, timeToRead } = markdownRemark;
   return (
-    <Fragment>
+    <>
       <NavBar />
       <Container>
         <GlobalStyles />
@@ -21,7 +20,7 @@ export default function Template({ data }) {
           <div className="blog-post-content">{ReactHtmlParser(html)}</div>
         </div>
       </Container>
-    </Fragment>
+    </>
   );
 }
 
@@ -33,6 +32,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        status
       }
       timeToRead
     }

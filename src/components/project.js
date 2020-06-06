@@ -1,10 +1,9 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowCircleLeft,
-  faArrowCircleRight
+  faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "@material-ui/core/Button";
-// import { Link } from "gatsby";
 import Image from "gatsby-image";
 import React from "react";
 import Styled from "styled-components";
@@ -35,14 +34,14 @@ const Header = Styled.div`
     }
 `;
 const Subheading = Styled.h3`
-  grid-row: ${props => props.row};
+  grid-row: ${(props) => props.row};
   grid-column: 1/4;
   font-weight: bold;
   color: #2835F1;
   
   @media ${device.mobileL} {
-        grid-row: ${props => (props.row !== 1 ? props.row + 1 : 1)};
-        grid-row: ${props => (props.row === 3 ? 6 : "")};
+        grid-row: ${(props) => (props.row !== 1 ? props.row + 1 : 1)};
+        grid-row: ${(props) => (props.row === 3 ? 6 : "")};
         grid-column: 1/13;
 
     }
@@ -107,10 +106,6 @@ const Links = Styled.div`
           }
 `;
 
-const IconWrapper = Styled.span`
-  
-`;
-
 const ProjectPreview = ({
   title,
   description,
@@ -119,7 +114,7 @@ const ProjectPreview = ({
   tags,
   features,
   challenges,
-  github
+  github,
 }) => (
   <div className="project">
     <Header>
@@ -173,7 +168,7 @@ const ProjectPreview = ({
       <Subheading row={3}>Key Features</Subheading>
       <Features>
         <ul>
-          {features.map(i => (
+          {features.map((i) => (
             <li>{i}</li>
           ))}
         </ul>
