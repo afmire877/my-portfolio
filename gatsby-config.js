@@ -1,38 +1,37 @@
 module.exports = {
   siteMetadata: {
-    title: "Ahmed Mire - Web Developer - Portfolio",
+    title: 'Ahmed Mire - Web Developer - Portfolio',
     description: `
-      This is a blog theme. The description will be showed in SEO results on pages
-      without their own descriptions.
+    I am a web developer/designer based in London. I pride myself on writing concise yet readable code, solving problems and always strive to create the highest quality user experience possible. I'm told I have a genuine eye for aesthetics and enjoy the creative process.
     `,
-    siteUrl: "https://ahmedmire.com",
+    siteUrl: 'https://ahmedmire.com',
     author: {
-      name: "Ahmed Mire",
-      title: "Web Developer based in London",
+      name: 'Ahmed Mire',
+      title: 'Web Developer based in London',
       minibio: `
         I am a Web developer that loves automation.
       `,
     },
     org: {
-      name: "Level up Web design",
-      url: "https://levelupweb.com",
-      logo: "https://levelup.com/logo.png",
+      name: 'Level up Web design',
+      url: 'https://levelupweb.com',
+      logo: 'https://levelup.com/logo.png',
     },
     social: {
-      twitter: "https://twitter.com/fuadcodes",
-      github: "https://github.com/afmire877",
-      linkedin: "https://www.linkedin.com/in/ahmedmire",
-      medium: "https://medium.com/@afmire877",
-      dev: "https://dev.to/afmire877",
-      resume: "https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1",
-      email: "hello@ahmedmire.com",
+      twitter: 'https://twitter.com/fuadcodes',
+      github: 'https://github.com/afmire877',
+      linkedin: 'https://www.linkedin.com/in/ahmedmire',
+      medium: 'https://medium.com/@afmire877',
+      dev: 'https://dev.to/afmire877',
+      resume: 'https://www.dropbox.com/s/irxennui6p5rv94/cv-1.pdf?dl=1',
+      email: 'hello@ahmedmire.com',
     },
   },
   plugins: [
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: "./data/",
+        path: './data/',
       },
     },
     {
@@ -52,22 +51,22 @@ module.exports = {
     },
 
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: "Dark+ (default dark)", // Or install your favorite theme from GitHub
+              theme: 'Dark+ (default dark)', // Or install your favorite theme from GitHub
             },
           },
         ],
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-transformer-json",
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
+    'gatsby-plugin-react-helmet',
 
     {
       resolve: `gatsby-plugin-material-ui`,
@@ -82,11 +81,9 @@ module.exports = {
       options: {
         url: `https://www.medium.com/feed/@afmire877`,
         name: `GatsbyBlog`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
         parserOption: {
           customFields: {
-            item: ["itunes:duration"],
+            item: ['itunes:duration'],
           },
         },
       },
