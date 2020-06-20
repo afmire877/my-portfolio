@@ -1,29 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import Styled, { createGlobalStyle } from 'styled-components';
 import NavBar from '../components/Navbar/navbar';
 import Meta from '../components/blogMeta';
 import { blogStyles } from '../components/utils/typography';
 
-export default function Template({ data }) {
+export default ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html, timeToRead } = markdownRemark;
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    window.addEventListener('DOMContentLoaded', () => {
-      let blogContent = document.querySelector('.blog-post-content');
-      blogContent.querySelectorAll('pre.grvsc-container').forEach(item => {
-        item.outerHTML = `
-        <div class= "lang-tabbed_container">
-          <div class="lang-tabbed-item">
-            ${item.dataset.language.toUpperCase()}
+    let blogContent = document.querySelector('.blog-post-content');
+    blogContent.querySelectorAll('pre.grvsc-container').forEach(item => {
+      let html = item.outerHTML;
+
+      item.outerHTML = `
+          <div class= 'lang-tabbed_container'>
+            <div class='lang-tabbed-item'>
+              ${item.dataset.language.toUpperCase()}
+            </div>
+            ${html}
           </div>
-          ${item.outerHTML}
-        </div>
         `;
-      });
     });
-  }, [html]);
+  }, []);
 
   return (
     <>
@@ -33,15 +34,17 @@ export default function Template({ data }) {
         <div className="blog-post">
           <Title>{frontmatter.title}</Title>
           <Meta date={frontmatter.date} timeToRead={timeToRead} />
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          ></div>
+          {visible && (
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            ></div>
+          )}
         </div>
       </Container>
     </>
   );
-}
+};
 
 export const pageQuery = graphql`
   query($path: String!) {

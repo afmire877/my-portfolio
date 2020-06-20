@@ -1,6 +1,6 @@
-import React from "react";
-import Styled from "styled-components";
-import ReadMins from "../components/readMins";
+import React from 'react';
+import Styled from 'styled-components';
+import ReadMins from '../components/readMins';
 
 export default ({ date, timeToRead }) => {
   return (
@@ -10,7 +10,7 @@ export default ({ date, timeToRead }) => {
   );
 };
 
-const Meta = Styled.p`
+const Meta = Styled.div`
   font-size: 13px;
   grid-column: 1/9;
   color: black;

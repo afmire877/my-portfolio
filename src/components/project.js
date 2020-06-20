@@ -1,14 +1,14 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowCircleLeft,
   faArrowCircleRight,
-} from "@fortawesome/free-solid-svg-icons";
-import Button from "@material-ui/core/Button";
-import Image from "gatsby-image";
-import React from "react";
-import Styled from "styled-components";
-import { device } from "./Common/desktop";
-import Icon from "./Common/icons";
+} from '@fortawesome/free-solid-svg-icons';
+import Button from '@material-ui/core/Button';
+import Image from 'gatsby-image';
+import React from 'react';
+import Styled from 'styled-components';
+import { device } from './Common/desktop';
+import Icon from './Common/icons';
 
 const ContentWrapper = Styled.div`
   display: grid;
@@ -34,14 +34,14 @@ const Header = Styled.div`
     }
 `;
 const Subheading = Styled.h3`
-  grid-row: ${(props) => props.row};
+  grid-row: ${props => props.row};
   grid-column: 1/4;
   font-weight: bold;
   color: #2835F1;
   
   @media ${device.mobileL} {
-        grid-row: ${(props) => (props.row !== 1 ? props.row + 1 : 1)};
-        grid-row: ${(props) => (props.row === 3 ? 6 : "")};
+        grid-row: ${props => (props.row !== 1 ? props.row + 1 : 1)};
+        grid-row: ${props => (props.row === 3 ? 6 : '')};
         grid-column: 1/13;
 
     }
@@ -168,7 +168,7 @@ const ProjectPreview = ({
       <Subheading row={3}>Key Features</Subheading>
       <Features>
         <ul>
-          {features.map((i) => (
+          {features.map(i => (
             <li>{i}</li>
           ))}
         </ul>
