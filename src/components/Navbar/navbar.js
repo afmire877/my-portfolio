@@ -57,7 +57,7 @@ const NavBar = ({ home }) => {
       <Nav home={home}>
         <a href="#projects">projects</a>
         <a href="#about">about</a>
-        <a href="#blog">blog</a>
+        <a href="/blog">blog</a>
         <a href="#contact">contact</a>
       </Nav>
     </Header>

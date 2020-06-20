@@ -1,8 +1,8 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout/layout";
-import Styled from "styled-components";
-import ReadMins from "../components/readMins";
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout/layout';
+import Styled from 'styled-components';
+import ReadMins from '../components/readMins';
 
 export const query = graphql`
   {
@@ -27,7 +27,7 @@ const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <div>
-      <Layout home={false} style={{ backgroundColor: "#f8f8f8" }}>
+      <Layout home={false} style={{ backgroundColor: '#f8f8f8' }}>
         {posts.map((item, index) => {
           const { excerpt, frontmatter, timeToRead } = item.node;
           console.log(item.node);
@@ -90,7 +90,12 @@ const BlogItem = Styled.a`
     grid-template-columns: repeat(8, 1fr);
     padding: 20px;
     border-radius: 5px;
-    grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(40px, 1fr)); 
+    @media (max-width:500px){
+      & {
+        grid-column: 1 / 13;
+      }
+    }
 `;
 
 const Title = Styled.h1`
