@@ -1,14 +1,28 @@
-import React, { useEffect } from "react";
-import { graphql } from "gatsby";
-import Styled, { createGlobalStyle } from "styled-components";
-import NavBar from "../components/Navbar/navbar";
-import Meta from "../components/blogMeta";
-import { blogStyles } from "../components/utils/typography";
-import ReactHtmlParser from "react-html-parser";
+import React, { useEffect } from 'react';
+import { graphql } from 'gatsby';
+import Styled, { createGlobalStyle } from 'styled-components';
+import NavBar from '../components/Navbar/navbar';
+import Meta from '../components/blogMeta';
+import { blogStyles } from '../components/utils/typography';
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html, timeToRead } = markdownRemark;
+
+  useEffect(() => {
+    let blogContent = document.querySelector('.blog-post-content');
+    blogContent.querySelectorAll('pre.grvsc-container').forEach(item => {
+      item.outerHTML = `
+      <div class= "lang-tabbed_container">
+        <div class="lang-tabbed-item">
+          ${item.dataset.language.toUpperCase()}
+        </div>
+        ${item.outerHTML}
+      </div>
+      `;
+    });
+  }, [html]);
+
   return (
     <>
       <NavBar />
@@ -58,8 +72,17 @@ const GlobalStyles = createGlobalStyle`
   code span .mtk4 {
     font-family: "JetBrainsMono"!important;
   }
-  pre.grvsc-container::after {
-    content: "";
+  .blog-post-content {
+    max-width: 900px;
+    padding-top: 150px;
+    margin: 0 auto;
+  }
+  .lang-tabbed_container {
+    position: relative;
+
+  }
+  .lang-tabbed-item {
+    font-size: 0.9rem;
     height: 39px;
     width: fit-content;
     padding: 2px 8px;
@@ -76,42 +99,6 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-  } 
-  pre.grvsc-container  {
-    overflow:unset;
-    position: relative;
-  } 
-  pre.grvsc-container[data-language='js'] {
-    &::after {
-        content: 'JS' ;
-    }
-  } 
-  pre.grvsc-container[data-language='html'] {
-    &::after {
-        content: 'HTML' ;
-    }
-  } 
-  pre.grvsc-container[data-language='css'] {
-    &::after {
-        content: 'CSS' ;
-    }
-  } 
-  pre.grvsc-container[data-language='php'] {
-    &::after {
-        content: 'PHP' ;
-    }
-  } 
-
-  pre.grvsc-container[data-language='bash'] {
-    &::after {
-        content: 'BASH' ;
-    }
-  } 
-
-  pre.grvsc-container[data-language='shell'] {
-    &::after {
-        content: 'SHELL' ;
-    }
   } 
 
 
