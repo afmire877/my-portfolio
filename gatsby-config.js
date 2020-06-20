@@ -50,7 +50,20 @@ module.exports = {
         path: `${__dirname}/content/posts`,
       },
     },
-    "gatsby-transformer-remark",
+
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Dark+ (default dark)", // Or install your favorite theme from GitHub
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-json",
