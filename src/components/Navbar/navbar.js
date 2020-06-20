@@ -1,21 +1,21 @@
-import React from "react";
-import Logo from "./../../../static/logo.svg";
-import Styled from "styled-components";
-import { device } from "../Common/desktop";
+import React from 'react';
+import Logo from './../../../static/logo.svg';
+import Styled from 'styled-components';
+import { device } from '../Common/desktop';
 
 const Nav = Styled.nav`
     display: flex;
     justify-content: flex-end;
     grid-column: 6 / 12;
     align-items: center;
-    display: ${(props) => (props.home ? "" : "none")};
+    display: ${props => (props.home ? '' : 'none')};
 
     & a {
     margin-left: 40px;
     font-size: 1rem;
     text-transform: lowercase;
     text-decoration: none;
-    color: ${(props) => (props.home ? "white" : "#2634F2")};
+    color: ${props => (props.home ? 'white' : '#2634F2')};
 
     }
     @media ${device.mobileL} {
@@ -31,11 +31,11 @@ const Img = Styled.img`
 `;
 const Header = Styled.header`
 
-    position: ${(props) => (props.home ? "absolute" : "")};
-    filter: ${(props) =>
+    position: ${props => (props.home ? 'absolute' : '')};
+    filter: ${props =>
       props.home
-        ? ""
-        : "invert(82%) sepia(99%) saturate(6787%) hue-rotate(243deg) brightness(95%) contrast(99%)"};
+        ? ''
+        : 'invert(82%) sepia(99%) saturate(6787%) hue-rotate(243deg) brightness(95%) contrast(99%)'};
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -57,6 +57,7 @@ const NavBar = ({ home }) => {
       <Nav home={home}>
         <a href="#projects">projects</a>
         <a href="#about">about</a>
+        <a href="#blog">blog</a>
         <a href="#contact">contact</a>
       </Nav>
     </Header>

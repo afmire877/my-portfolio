@@ -1,8 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import React from 'react';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 
 const SEO = ({ title, description, image, pathname, article }) => (
   <StaticQuery
@@ -22,15 +21,15 @@ const SEO = ({ title, description, image, pathname, article }) => (
     `}
     render={({
       site: {
-        siteMetadata: { defaultTitle, defaultDesc, siteurl, social }
-      }
+        siteMetadata: { defaultTitle, defaultDesc, siteurl, social },
+      },
     }) => {
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDesc,
         image: `${siteurl}${image}`,
-        url: `${siteurl}${pathname || "/"}`,
-        twitter: social.twitter
+        url: `${siteurl}${pathname || '/'}`,
+        twitter: social.twitter,
       };
       return (
         <Helmet title={seo.title}>
@@ -64,12 +63,12 @@ const SEO = ({ title, description, image, pathname, article }) => (
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.string,
 };
 SEO.defualtProps = {
   title: null,
   description: null,
-  image: null
+  image: null,
 };
 
 export default SEO;
