@@ -30,7 +30,6 @@ const BlogPage = ({ data }) => {
       <Layout home={false} style={{ backgroundColor: '#f8f8f8' }}>
         {posts.map((item, index) => {
           const { excerpt, frontmatter, timeToRead } = item.node;
-          console.log(item.node);
           return (
             frontmatter.status && (
               <BlogItem href={frontmatter.path} key={index}>

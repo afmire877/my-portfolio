@@ -10,16 +10,18 @@ export default function Template({ data }) {
   const { frontmatter, html, timeToRead } = markdownRemark;
 
   useEffect(() => {
-    let blogContent = document.querySelector('.blog-post-content');
-    blogContent.querySelectorAll('pre.grvsc-container').forEach(item => {
-      item.outerHTML = `
-      <div class= "lang-tabbed_container">
-        <div class="lang-tabbed-item">
-          ${item.dataset.language.toUpperCase()}
+    window.addEventListener('DOMContentLoaded', () => {
+      let blogContent = document.querySelector('.blog-post-content');
+      blogContent.querySelectorAll('pre.grvsc-container').forEach(item => {
+        item.outerHTML = `
+        <div class= "lang-tabbed_container">
+          <div class="lang-tabbed-item">
+            ${item.dataset.language.toUpperCase()}
+          </div>
+          ${item.outerHTML}
         </div>
-        ${item.outerHTML}
-      </div>
-      `;
+        `;
+      });
     });
   }, [html]);
 
