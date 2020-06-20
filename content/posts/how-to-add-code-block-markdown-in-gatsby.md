@@ -83,7 +83,7 @@ We will add the the little Language tab in the top right corner.
 
 To do this, gatsby-remark-vscode creates a data attribute called language we can use to identify what laguage the code block is.
 
-To create the little tab, we will use wrap ```css .grvsc-container ``` the a container div with class ```css .lang-tabbed_container ```  and we put a div with class ```css .lang-tabbed-item `` with the language attribute in it.
+To create the little tab, we will use wrap ``` .grvsc-container ``` the a container div with class ``` .lang-tabbed_container ```  and we put a div with class ``` .lang-tabbed-item `` with the language attribute in it.
 
 I placed in the useEffect hook of my Blog post Template component.
 
