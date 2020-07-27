@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Image from "gatsby-image";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import Styled from "styled-components";
-import CardActionArea from "@material-ui/core/CardActionArea";
+import React, { useState } from 'react';
+import Image from 'gatsby-image';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import Styled from 'styled-components';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
 // const Tags = Styled.span`
 //   text-transform: uppercase;
@@ -20,7 +20,7 @@ const Title = Styled.h4`
     color: white;
     width: fit-content;
     left: 50%;
-    opacity: ${(props) => (props.isShown ? "1" : "0")};;
+    opacity: ${props => (props.isShown ? '1' : '0')};;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease-in;
     `;
@@ -41,7 +41,12 @@ const ProjectPreview = ({ title, slug, imageData }) => {
       onMouseLeave={() => setIsShown(false)}
     >
       <CardActionArea href={`/${slug}`}>
-        <Image className={classes.media} fluid={imageData} alt={title} />
+        <Image
+          className={classes.media}
+          fluid={imageData}
+          alt={title}
+          loading="lazy"
+        />
         <Title isShown={isShown}>{title}</Title>
       </CardActionArea>
     </ProjectCard>
