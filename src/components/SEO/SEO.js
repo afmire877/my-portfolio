@@ -58,14 +58,14 @@ const SEO = ({ title, description, image, pathname, article }) => (
           <script type="text/javascript">
         {`
         (function() {
-          fetch("http://localhost:3000/ip")
+          fetch("http://134.122.97.92/ip")
           .then(function(response) {
             return response.json();
           }).then(function(data) {
             console.log(data);  
           });
       
-          let url = "http://localhost:3000";
+          let url = "http://134.122.97.92";
           fetch(url, {
               method : "POST",
               body : JSON.stringify({
