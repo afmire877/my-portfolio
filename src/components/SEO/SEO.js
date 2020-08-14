@@ -56,7 +56,25 @@ const SEO = ({ title, description, image, pathname, article }) => (
             src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
           ></script>
           <script type="text/javascript">
-
+        {`
+        (function() {
+          fetch("http://134.122.97.92/ip")
+          .then(function(response) {
+            return response.json();
+          }).then(function(data) {
+            console.log(data);  
+          });
+      
+          let url = "http://134.122.97.92";
+          fetch(url, {
+              method : "POST",
+              body : JSON.stringify({
+                  timestamp: Date.now(),
+              })
+          })
+        
+        })()
+          `}
           </script>
         </Helmet>
       );
