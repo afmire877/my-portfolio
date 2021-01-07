@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ahmed Mire - Web Developer - Portfolio',
     description: `
-    I am a web developer/designer based in London. I pride myself on writing concise yet readable code, solving problems and always strive to create the highest quality user experience possible. I'm told I have a genuine eye for aesthetics and enjoy the creative process.
+    I am a web developer based in London. I pride myself on writing concise yet readable code, solving problems and always strive to create the highest quality user experience possible. I'm told I have a genuine eye for aesthetics and enjoy the creative process.
     `,
     siteUrl: 'https://ahmedmire.com',
     author: {
