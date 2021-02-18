@@ -88,6 +88,19 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ahmed Mire  - Portfolio`,
+        short_name: `Ahmed Mire`,
+        start_url: `/`,
+        background_color: `#242DE7`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: "src/images/favicon-3.png"
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
   ],
 };

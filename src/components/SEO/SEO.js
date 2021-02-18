@@ -21,20 +21,21 @@ const SEO = ({ title, description, image, pathname, article }) => (
     `}
     render={({
       site: {
-        siteMetadata: { defaultTitle, defaultDesc, siteurl, social },
+        siteMetadata: { defaultTitle, defaultDesc, siteUrl, social },
       },
     }) => {
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDesc,
-        image: `${siteurl}${image}`,
-        url: `${siteurl}${pathname || '/'}`,
+        image: `${siteUrl}${image}`,
+        url: `${siteUrl}${pathname || '/'}`,
         twitter: social.twitter,
       };
       return (
         <Helmet title={seo.title}>
           <meta name="description" content={seo.description} />
           <meta name="image" content={seo.image} />
+          <link rel="canonical" href={siteUrl} />
           {seo.url && <meta property="og:url" content={seo.url} />}
           {(article ? true : null) && (
             <meta property="og:type" content="article" />
