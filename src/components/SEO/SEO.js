@@ -57,13 +57,12 @@ const SEO = ({ title, description, image, pathname, article }) => (
             src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
           ></script>
 
-          <script src="http://localhost:3000/javascripts/ahmedmire.js" />
-
-
-
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128407903-1"></script>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-128407903-1"
+          ></script>
           <script>
-              {`
+            {`
           
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -86,7 +85,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
               .then(console.log)
           
               `}
-         </script>
+          </script>
         </Helmet>
       );
     }}
@@ -104,5 +103,3 @@ SEO.defualtProps = {
 };
 
 export default SEO;
-
-
