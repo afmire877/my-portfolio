@@ -100,7 +100,12 @@ module.exports = {
         icon: "src/images/favicon-3.png"
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        appendScript: require.resolve(`src/custom-sw-code.js`),
+      },
+    },
     `gatsby-plugin-styled-components`,
   ],
 };
