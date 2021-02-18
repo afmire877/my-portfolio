@@ -103,7 +103,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        appendScript: require.resolve(`src/custom-sw-code.js`),
+        appendScript: require.resolve(__dirname + `/static/custom-sw-code.js`),
       },
     },
     `gatsby-plugin-styled-components`,
