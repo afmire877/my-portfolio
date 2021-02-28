@@ -69,20 +69,6 @@ const SEO = ({ title, description, image, pathname, article }) => (
               gtag('js', new Date());
 
               gtag('config', 'UA-128407903-1');
-
-              fetch("https://danken.io/", {
-                method: 'POST', 
-                mode: 'no-cors', // no-cors, *cors, same-origin
-                cache: 'no-cache',
-                headers: {
-                  'Content-Type': 'application/json'
-                  // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                redirect: 'follow', // manual, *follow, error
-                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                body: JSON.stringify("{ name : 'Ahmed' }") // body data type must match "Content-Type" header
-              }).then(console.log)
-              .then(console.log)
           
               `}
           </script>
