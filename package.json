@@ -42,7 +42,7 @@
     "gatsby-source-rss": "^1.0.0",
     "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-json": "^2.11.0",
-    "gatsby-transformer-remark": "^2.16.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.12.0",
     "particles.js": "^2.0.0",
     "prebuild-install": "^5.3.6",
